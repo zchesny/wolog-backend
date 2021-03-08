@@ -4,13 +4,14 @@ class UsersController < ApplicationController
     end 
 
     def index 
-        users = User.all 
-        render json: UserSerializer.new(users).to_serialized_json
+        render json: @users
     end 
 
     def show 
-        user = User.find(params[:id])
-        render json: UserSerializer.new(user).to_serialized_json
+        @user = User.find(params[:id])
+        render json: @user
+        # user = User.find(params[:id])
+        # render json: UserSerializer.new(user), adapter: :json
     end 
 
     def new 
