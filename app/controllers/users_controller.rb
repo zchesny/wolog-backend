@@ -13,9 +13,7 @@ class UsersController < ApplicationController
     end 
 
     def create 
-        binding.pry
         @user = User.new(user_params)
-        binding.pry
         if @user.save
             render json: @user
         end 
@@ -27,6 +25,6 @@ class UsersController < ApplicationController
     private 
 
     def user_params 
-        params.permit!
+        params.require(:user).permit(:name, :password, :image, :role)
     end 
 end
