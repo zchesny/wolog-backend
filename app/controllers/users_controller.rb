@@ -13,8 +13,20 @@ class UsersController < ApplicationController
     end 
 
     def create 
+        binding.pry
+        @user = User.new(user_params)
+        binding.pry
+        if @user.save
+            render json: @user
+        end 
     end 
 
     def update
+    end 
+
+    private 
+
+    def user_params 
+        params.permit!
     end 
 end
