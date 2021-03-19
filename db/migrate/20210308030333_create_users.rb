@@ -6,6 +6,15 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :role
       t.string :image
 
+      t.string :side 
+      t.integer :weight
+      t.string :gender 
+      t.string :age_class 
+      t.integer :time_trial
+      t.string :status 
+      t.text :notes 
+      t.string :contact_info
+
       t.timestamps
     end
   end
