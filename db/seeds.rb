@@ -9,20 +9,20 @@
 User.delete_all 
 #Pokemon.delete_all 
 
-users_name = [
-    'Natalie',
-    'Prince',
-    'Dick',
-    'Rachel',
-    'Garry',
-    'Jason',
-    'Matt',
-    'Niky',
-    'Ashley'
-  ]
+users = [
+  {name: 'Natalie', gender: 'female', role: 'steerer', password: 'pass'},
+  {name: 'Rachel', gender: 'female', role: 'steerer', password: 'pass'},
+  {name: 'Zoey', gender: 'female', role: 'paddler', password: 'pass'},
+  {name: 'Susan', gender: 'female', role: 'paddler', password: 'pass'},
+  {name: 'Alice', gender: 'female', role: 'paddler', password: 'pass'},
+  {name: 'Michael', gender: 'male', role: 'paddler', password: 'pass'},
+  {name: 'Ryan', gender: 'male', role: 'steerer', password: 'pass'},
+  {name: 'Doug', gender: 'male', role: 'paddler', password: 'pass'},
+  {name: 'Nate', gender: 'male', role: 'paddler', password: 'pass'}
+]
 
 user_collection = [] 
 
-users_name.each do |name| 
-    user_collection << User.create(name: name, password: "pass", role: "teammate")
+users.each_with_index do |user, index| 
+  user_collection << User.create(user)
 end 
