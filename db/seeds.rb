@@ -10,15 +10,19 @@ User.delete_all
 #Pokemon.delete_all 
 
 users = [
-  {name: 'Natalie', gender: 'female', role: 'steerer', password: 'pass'},
-  {name: 'Rachel', gender: 'female', role: 'steerer', password: 'pass'},
-  {name: 'Zoey', gender: 'female', role: 'paddler', password: 'pass'},
-  {name: 'Susan', gender: 'female', role: 'paddler', password: 'pass'},
-  {name: 'Alice', gender: 'female', role: 'paddler', password: 'pass'},
-  {name: 'Michael', gender: 'male', role: 'paddler', password: 'pass'},
-  {name: 'Ryan', gender: 'male', role: 'steerer', password: 'pass'},
-  {name: 'Doug', gender: 'male', role: 'paddler', password: 'pass'},
-  {name: 'Nate', gender: 'male', role: 'paddler', password: 'pass'}
+  {name: 'Natalie', gender: 'female', role: 'steerer', password: 'pass', status: 'active'},
+  {name: 'Rachel', gender: 'female', role: 'steerer', password: 'pass', status: 'inactive'},
+  {name: 'Zoey', gender: 'female', role: 'paddler', password: 'pass', status: 'active'},
+  {name: 'Susan', gender: 'female', role: 'drummer', password: 'pass', status: 'active'},
+  {name: 'Alice', gender: 'female', role: 'drummer', password: 'pass', status: 'inactive'},
+  {name: 'Michael', gender: 'male', role: 'paddler', password: 'pass', status: 'active'},
+  {name: 'Ryan', gender: 'male', role: 'steerer', password: 'pass', status: 'inactive'},
+  {name: 'Doug', gender: 'male', role: 'paddler', password: 'pass', status: 'active'},
+  {name: 'Nate', gender: 'male', role: 'drummer', password: 'pass', status: 'active'},
+  {name: 'Alan', gender: 'male', role: 'paddler', password: 'pass', status: 'active'},
+  {name: 'Ray', gender: 'male', role: 'steerer', password: 'pass', status: 'active'},
+  {name: 'Spencer', gender: 'male', role: 'paddler', password: 'pass', status: 'inactive'},
+  {name: 'Lance', gender: 'male', role: 'paddler', password: 'pass', status: 'inactive'}
 ]
 
 user_collection = [] 
