@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_03_17_042904) do
   create_table "user_lineups", force: :cascade do |t|
     t.integer "user_id"
     t.integer "lineup_id"
+    t.integer "position"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

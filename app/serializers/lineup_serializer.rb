@@ -1,3 +1,3 @@
 class LineupSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :description, :capacity, :users, :user_lineups
 end

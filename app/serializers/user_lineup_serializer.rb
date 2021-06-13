@@ -1,3 +1,3 @@
 class UserLineupSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :user, :lineup, :position
 end

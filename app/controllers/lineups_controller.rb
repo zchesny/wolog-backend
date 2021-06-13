@@ -15,6 +15,7 @@ class LineupsController < ApplicationController
     def create 
         binding.pry
         @lineup = Lineup.new(lineup_params)
+        binding.pry
         if @lineup.save
             render json: @lineup
         end 
@@ -25,26 +26,15 @@ class LineupsController < ApplicationController
 
     private 
 
-    # def course_params 
-    #     params.require(:course).permit(
-    #         :name,
-    #         :description,
-    #         :capacity,
-    #         :location,
-    #         :military_start_time,
-    #         :start_time,
-    #         :duration,
-    #         :end_time,
-    #         user_ids: []
-    #     )
-    # end 
-
     def lineup_params 
         params.require(:lineup).permit(
             :name, 
             :description, 
             :capacity, 
-            :userIds
+            user_lineups_attributes: [
+                :user_id, 
+                :position 
+            ]
         )
     end 
 end
