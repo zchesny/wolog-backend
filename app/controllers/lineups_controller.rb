@@ -12,10 +12,8 @@ class LineupsController < ApplicationController
     def new 
     end 
 
-    def create 
-        binding.pry
+    def create
         @lineup = Lineup.new(lineup_params)
-        binding.pry
         if @lineup.save
             render json: @lineup
         end 
